@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class CoffeeMachine {
@@ -6,11 +5,6 @@ public class CoffeeMachine {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-
-//        int cups = input.nextInt();
-//        int water = cups * 200;
-//        int milk = cups * 50;
-//        int coffeeBeans = cups * 15;
 
         System.out.println("Write how many ml of water the coffee machine has: ");
         int water = input.nextInt();
@@ -36,12 +30,6 @@ public class CoffeeMachine {
          } else {
              System.out.println("No, I can only make " + totalCups + " cup(s) of coffee");
          }
-
-
-
-
-
-
 
     }
 }
