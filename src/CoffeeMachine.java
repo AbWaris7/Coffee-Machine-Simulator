@@ -42,6 +42,8 @@ public class CoffeeMachine {
                 cups -= 1;
                 money += 6;
             }
+
+
         }
 
         System.out.println("The coffee machine has:");
@@ -52,6 +54,8 @@ public class CoffeeMachine {
         System.out.println("$"+money + " of money\n");
 
     }
+
+
 
     private static void fillMachine(Scanner scanner) {
         System.out.println("Write how many ml of water you want to add:");
@@ -70,29 +74,39 @@ public class CoffeeMachine {
         money = 0;
         displayState();
     }
-    private static void displayMenu(Scanner scanner) {
-        System.out.println("Write action (buy, fill, take, exit):");
-        String action = scanner.next();
-
-        switch (action) {
-            case "buy":
-                buyCoffee(scanner);
-                break;
-            case "fill":
-                fillMachine(scanner);
-                break;
-            case "take":
-                takeMoney();
-                break;
-        }
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
 
             displayState();
-            displayMenu(scanner);
+            while (true)
+            {
+                System.out.println("Write action (buy, fill, take, remaining, exit):");
+                String action = scanner.next();
+
+                switch (action) {
+                    case "buy":
+                        buyCoffee(scanner);
+                        break;
+                    case "fill":
+                        fillMachine(scanner);
+                        break;
+                    case "take":
+                        takeMoney();
+                        break;
+                    case "remaining":
+                        displayState();
+                        break;
+                    case "exit":
+                        return;
+                    default:
+                        System.out.println("Invalid action");
+
+                }
+
+            }
+
 
 
     }
