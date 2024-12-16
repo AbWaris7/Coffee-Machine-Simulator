@@ -57,7 +57,7 @@ Manages the coffee machine's state and handles user actions:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/AbWaris7/Coffee-Machine-Simulator.git
    ```
 
 2. Compile the program:
